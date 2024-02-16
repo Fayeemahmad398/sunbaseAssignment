@@ -1,0 +1,152 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  padding: 0px 20px;
+  border-bottom: 1px solid grey;
+}
+.form-designer {
+  font-weight: 560;
+  color: rgb(86, 85, 85);
+}
+
+.btn-save {
+  height: 25px;
+  font-size: 17px;
+  width: 90px;
+  box-shadow: 0px 0px 2px grey;
+}
+main {
+  min-height: 91vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.sidebar-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background: rgb(242, 241, 241);
+}
+.comp-div {
+  display: flex;
+  width: 94%;
+  padding: 10px 0px;
+  padding-left: 24px;
+  border-bottom: 1px solid grey;
+  height: 25px;
+  align-items: center;
+}
+.components {
+  font-weight: 600;
+  color: rgb(107, 104, 104);
+}
+.types-of-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 85%;
+  padding: 3px;
+}
+.types-of-elements button {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  align-items: center;
+  background: #fff;
+  font-size: 16px;
+  color: rgb(93, 91, 91);
+  border: none;
+  outline: 1px solid grey;
+  border-radius: 3px;
+  font-weight: 549;
+}
+.types-of-elements button span:nth-child(2) {
+  font-size: 25px;
+  color: black;
+}
+.types-of-elements button:hover {
+  cursor: pointer;
+}
+/* ========================================= */
+.form-section {
+  padding: 20px 140px;
+  background: rgb(211 208 208);
+  display: flex;
+  justify-content: center;
+}
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.eachElement {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+.eachElement:hover {
+  cursor: pointer;
+}
+.label-icons {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  height: 30px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(77, 75, 75);
+}
+.label-icons span {
+  font-size: 19px;
+  color: grey;
+}
+select {
+  padding: 8px;
+  border-radius: 3px;
+  color: grey !important;
+  border: none;
+  outline: 1px solid grey;
+}
+
+.eachElement input {
+  border: none;
+  outline: 1px solid grey;
+  border-radius: 3px;
+  padding: 8px;
+  font-size: 14px;
+  color: grey !important;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  outline: 1px solid gray;
+  border-radius: 10px;
+
+  padding: 20px;
+  min-height: 80vh;
+  width: 70%;
+}
+.eachoption {
+  border: 2px solid yellow;
+}
+textarea {
+  border: none;
+  border-radius: 2px;
+  outline: 1px solid grey;
+  padding: 3px;
+}
