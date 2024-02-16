@@ -7,13 +7,15 @@ body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Header is designed here  */
 header {
+  
   display: flex;
   justify-content: space-between;
   height: 50px;
   align-items: center;
   padding: 0px 20px;
-  border-bottom: 1px solid grey;
+  border-bottom: 2px solid rgb(225, 225, 225);
 }
 .form-designer {
   font-weight: 560;
@@ -29,11 +31,14 @@ header {
 .btn-save:hover {
   cursor: pointer;
 }
+
+/* Main section designed here */
 main {
   min-height: 91vh;
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
+/* Left section (sidebar) is designed here */
 .sidebar-section {
   height: 100%;
   display: flex;
@@ -47,7 +52,7 @@ main {
   width: 94%;
   padding: 10px 0px;
   padding-left: 24px;
-  border-bottom: 1px solid grey;
+  border-bottom: 2px solid rgb(212, 211, 211);
   height: 25px;
   align-items: center;
 }
@@ -70,9 +75,9 @@ main {
   align-items: center;
   background: #fff;
   font-size: 16px;
-  color: rgb(93, 91, 91);
+  color: rgb(45, 44, 44);
   border: none;
-  outline: 1px solid grey;
+  outline: 2px solid rgb(209, 208, 208);
   border-radius: 3px;
   font-weight: 549;
 }
@@ -83,7 +88,7 @@ main {
 .types-of-elements button:hover {
   cursor: pointer;
 }
-/* ========================================= */
+/* ===Right section (Form section) is designed here========== */
 .form-section {
   padding: 20px 140px;
   background: rgb(211 208 208);
@@ -94,11 +99,11 @@ main {
   display: flex;
   flex-direction: column;
   background: #fff;
+  outline: 2px solid rgb(195, 194, 194);
 }
 .eachElement {
   display: flex;
   flex-direction: column;
-  /* border: 2px solid red; */
 }
 .eachElement:hover {
   cursor: pointer;
@@ -123,6 +128,7 @@ select {
   color: grey !important;
   border: none;
   outline: 1px solid grey;
+  font-size: 14px;
 }
 
 .eachElement input {
@@ -145,17 +151,22 @@ form {
   width: 70%;
 }
 .eachoption {
-  border: 2px solid yellow;
+  border: 2px solid yellow !important;
 }
 textarea {
   border: none;
   border-radius: 2px;
-  outline: 1px solid grey;
+  outline: 2px solid rgb(223, 222, 222) !important;
   padding: 3px;
   font-size: 14px;
 }
 
-/* =======================Media query below to it  */
+input,
+select {
+  outline: 2px solid rgb(223, 222, 222) !important;
+}
+
+/* ====Media query below to it  */
 
 @media (max-width: 1000px) {
   .form-section {

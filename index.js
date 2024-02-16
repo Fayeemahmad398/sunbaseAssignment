@@ -1,7 +1,8 @@
 import { elementTypes, formDataCollection } from "./utils.js";
-const sideBarelements = document.getElementsByClassName("types-of-elements")[0];
 let formData = formDataCollection;
+const sideBarelements = document.getElementsByClassName("types-of-elements")[0];
 
+//Header is rendered here
 function renderHeader() {
   document.getElementsByTagName("header")[0].innerHTML = `
 <div class="form-designer">Form Designer</div>
@@ -10,6 +11,7 @@ function renderHeader() {
 }
 renderHeader();
 
+// Side bar is rendered here
 function rendersidebar() {
   sideBarelements.innerHTML = "";
   elementTypes.forEach((ele) => {
@@ -23,7 +25,7 @@ function rendersidebar() {
 }
 rendersidebar();
 
-// =============Side bar task done below==================================
+// =============Side bar logic done below================
 const sideBarBtns = document.querySelectorAll(".addElement");
 // tracking which Element need to Add
 sideBarBtns.forEach((btn) => {
@@ -54,6 +56,10 @@ function addThisElement(type) {
 let form = document.getElementsByTagName("form")[0];
 function RenderFormElements(upDatedData) {
   form.innerHTML = "";
+  if (upDatedData.length == 0) {
+    form.innerHTML = "Add some Elements";
+    return;
+  }
   upDatedData.forEach((obj, index) => {
     if (obj.type == "input") {
       form.innerHTML += `
@@ -142,8 +148,8 @@ function dragoverIndex(e, ind) {
   e.preventDefault();
 }
 
+// updating order of Elements
 function dropEle(e, ind) {
-  // updating order of Elements
   e.preventDefault();
   dropInd = ind;
   let deltedEle = formData.splice(dragStartInd, 1);
