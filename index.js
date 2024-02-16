@@ -37,12 +37,14 @@ function addThisElement(type) {
   let newObjforNewElement = {
     id: Math.random().toString(),
     type: type,
-    label: `${type} label`,
   };
+
   if (type == "input" || type == "textarea") {
-    newObjforNewElement.placeholder = type;
+    newObjforNewElement.placeholder = "Sample placeholder";
+    newObjforNewElement.label = `${type == "input" ? "Sample Label" : type} `;
   } else {
     newObjforNewElement.options = ["Option1", "Option2", "Option3"];
+    newObjforNewElement.label = `Select `;
   }
   formData.push(newObjforNewElement);
   RenderFormElements(formData);
@@ -84,7 +86,9 @@ function RenderFormElements(upDatedData) {
             </div>
       <select name="">
       <option value="" class="eachoption">Choose options</option>
-      ${obj.options.map((val) => `<option value="" class="eachoption">${val}</option>`).join()}
+      ${obj.options
+        .map((val) => `<option value="" class="eachoption">${val}</option>`)
+        .join()}
         </select>
         </div> 
 `;
@@ -100,7 +104,6 @@ function trackDeleteIconAndDelete() {
   let deleteIconsEle = document.querySelectorAll(".deleteThis");
   deleteIconsEle.forEach((icon) => {
     icon.addEventListener("click", (e) => {
-      console.log(e.target.id);
       formData = formData.filter((obj) => obj.id != e.target.id);
       RenderFormElements(formData);
     });
